@@ -1,5 +1,6 @@
-const display = document.querySelector('#display');
-const numberButtons = document.querySelectorAll('.number');
+const display = document.querySelector("display");
+const numberButtons = document.querySelectorAll(".number");
+const operatorButtons = document.querySelectorAll(".operator")
 
 numberButtons.forEach ((button) => {
     button.addEventListener('click', () => {
@@ -7,7 +8,11 @@ numberButtons.forEach ((button) => {
     });
 });
 
-
+operatorButtons.forEach ((button) =>{
+    button.addEventListener('click', () => {
+    display.textContent += button.textContent
+    });
+})
 
 function operate(num1 , num2, operator){
     if (operator === "+"){
