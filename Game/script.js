@@ -1,5 +1,11 @@
-let humanScore = 0
-let computerScore = 0
+let humanScore = document.createElement("h3")
+let computerScore = document.createElement("h3")
+const container = document.querySelector(".container")
+
+container.append(humanScore, computerScore)
+
+humanScore = 0
+computerScore = 0
 
 
 function computerChoice() {
