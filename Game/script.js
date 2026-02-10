@@ -26,7 +26,7 @@ function playGame(){
         return "Paper";
     }
     if (randomNumber === 2){
-        return "S   cissor";
+        return "Scissor";
     }
     } 
 
@@ -43,16 +43,16 @@ function playGame(){
    function verdict (humanSelection, computerSelection){
 
     if (humanSelection === computerSelection){
-        rozsudek.textContent = "Remíza";
+        rozsudek.textContent = "draw";
     }
 
     else if (
-        (humanSelection === "Rock" && computerSelection === "scissor") ||
-        (humanSelection === "Paper" && computerSelection === "rock") ||
-        ((humanSelection === "Scissor" || humanSelection === "scissor") && computerSelection === "paper")
+        (humanSelection === "Rock" && computerSelection === "Scissor") ||
+        (humanSelection === "Paper" && computerSelection === "Rock") ||
+        ((humanSelection === "Scissor" || humanSelection === "Scissor") && computerSelection === "Paper")
     ){
-            humanScore++;
-            return "Win  Score :" + humanScore + "-" + computerScore;
+        humanScore = "1"
+        return "draw";
     }
     
     else{
@@ -62,7 +62,5 @@ function playGame(){
 }
      
 }
-
-let humanSelection = 0
 
 playGame();
