@@ -1,4 +1,4 @@
-let humanScore = document.createElement("h3")
+    let humanScore = document.createElement("h3")
 let computerScore = document.createElement("h3")
 let rozsudek = document.createElement("h3")
 const container = document.querySelector(".container")
@@ -43,7 +43,7 @@ function playGame(){
    function verdict (humanSelection, computerSelection){
 
     if (humanSelection === computerSelection){
-        rozsudek.textContent = "draw";
+        return "draw";
     }
 
     else if (
@@ -51,13 +51,11 @@ function playGame(){
         (humanSelection === "Paper" && computerSelection === "Rock") ||
         ((humanSelection === "Scissor" || humanSelection === "Scissor") && computerSelection === "Paper")
     ){
-        humanScore = "1"
-        return "draw";
+        return "win"
     }
     
     else{
-        computerScore++
-        return "Lose  Score :" + humanScore + "-" + computerScore;
+        return "lose";
     }
 }
      

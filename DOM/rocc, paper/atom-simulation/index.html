@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atom Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Atom Simulation</h1>
+            <p class="subtitle">Interactive atomic structure visualization</p>
+        </header>
+
+        <div class="controls-panel">
+            <div class="control-group">
+                <label for="atom-select">Select Atom:</label>
+                <select id="atom-select">
+                    <option value="hydrogen">Hydrogen (H) - 1 electron</option>
+                    <option value="helium">Helium (He) - 2 electrons</option>
+                    <option value="lithium">Lithium (Li) - 3 electrons</option>
+                    <option value="carbon">Carbon (C) - 6 electrons</option>
+                    <option value="nitrogen">Nitrogen (N) - 7 electrons</option>
+                    <option value="oxygen">Oxygen (O) - 8 electrons</option>
+                    <option value="neon">Neon (Ne) - 10 electrons</option>
+                    <option value="sodium">Sodium (Na) - 11 electrons</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="speed-slider">Animation Speed:</label>
+                <input type="range" id="speed-slider" min="0.1" max="3" step="0.1" value="1">
+                <span id="speed-value">1.0x</span>
+            </div>
+
+            <div class="control-group">
+                <label for="show-orbits">
+                    <input type="checkbox" id="show-orbits" checked>
+                    Show Orbit Paths
+                </label>
+            </div>
+
+            <div class="control-group">
+                <label for="show-nucleus">
+                    <input type="checkbox" id="show-nucleus" checked>
+                    Show Nucleus
+                </label>
+            </div>
+
+            <div class="control-group">
+                <button id="pause-btn">Pause</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="atom-canvas"></canvas>
+        </div>
+
+        <div class="info-panel">
+            <h3>Atom Information</h3>
+            <div id="atom-info">
+                <p><strong>Element:</strong> <span id="element-name">Hydrogen</span></p>
+                <p><strong>Symbol:</strong> <span id="element-symbol">H</span></p>
+                <p><strong>Atomic Number:</strong> <span id="atomic-number">1</span></p>
+                <p><strong>Electrons:</strong> <span id="electron-count">1</span></p>
+                <p><strong>Protons:</strong> <span id="proton-count">1</span></p>
+                <p><strong>Neutrons:</strong> <span id="neutron-count">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="atom-simulation.js"></script>
+</body>
+</html>
